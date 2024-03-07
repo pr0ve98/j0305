@@ -16,15 +16,25 @@ import java.util.Scanner;
 public class Test1Run_급여계산 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		
 		Test1_급여계산VO vo = new Test1_급여계산VO();
+		Test1Service_급여계산 service = new Test1Service_급여계산();
 		
 		while(true) {
+			System.out.print("\n사원 코드를 입력하세요. ");
+			vo.setNo(sc.nextInt());
+			System.out.print("이름을 입력하세요. ");
+			vo.setName(sc.next());
 			System.out.print("직급코드를 입력하세요. (부장-B, 과장-K, 대리-D, 사원-S): ");
 			vo.setCode(sc.next());
 			System.out.print("초과근무 시간을 입력하세요. ");
 			vo.setSudang(sc.nextInt());
-			sc.close();
+			service.print(vo);
+			System.out.print("종료하시겠습니까?(Y/N) ");
+			String ans = sc.next();
+			if(ans.toLowerCase().equals("y")) break;
 		}
-		
+		System.out.println("수고하셨습니다 ^-^");
+		sc.close();
 	}
 }

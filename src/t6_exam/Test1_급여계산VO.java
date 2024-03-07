@@ -3,9 +3,12 @@ package t6_exam;
 public class Test1_급여계산VO {
 	String code;
 	String name;
+	int no;
 	int bonbong;
 	int sudang;
 	int gongje;
+	int netpay;
+	
 	public String getCode() {
 		return code;
 	}
@@ -35,6 +38,18 @@ public class Test1_급여계산VO {
 	}
 	public void setGongje(int gongje) {
 		this.gongje = gongje;
+	}
+	public int getNetpay() {
+		return netpay;
+	}
+	public void setNetpay(int netpay) {
+		this.netpay = netpay;
+	}
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
 	}
 	
 	
